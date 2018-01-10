@@ -6,7 +6,7 @@ This is their own daily practice of small
 [GSYVideoPlayer的github地址](https://github.com/CarGuo/GSYVideoPlayer)
 ### 跳转URL播放视频
 主要代码
-'''
+"'
 private void playVideo() {
         detailPlayer.release();
         gsyVideoOptionBuilder.setUrl(url)
@@ -21,7 +21,7 @@ private void playVideo() {
             }
         }, 1000);
     }
-'''
+'"
 其中URL来源
 '''
 url = customInputDialog.getEditMessage().getText().toString();
