@@ -6,7 +6,8 @@ This is their own daily practice of small
 [GSYVideoPlayer的github地址](https://github.com/CarGuo/GSYVideoPlayer)
 ### 跳转URL播放视频
 主要代码
-> private void playVideo() {
+'''
+private void playVideo() {
         detailPlayer.release();
         gsyVideoOptionBuilder.setUrl(url)
                 .setCacheWithPlay(cache)
@@ -20,19 +21,26 @@ This is their own daily practice of small
             }
         }, 1000);
     }
+'''
 其中URL来源
+'''
 > url = customInputDialog.getEditMessage().getText().toString();
+'''
 ### 退出播放页面时获取观看进度下次进入自动续播
 获取退出播放页面时播放进度
-> i = video.getCurrentPositionWhenPlaying();
+'''
+i = video.getCurrentPositionWhenPlaying();
         SharedPreferences sharedPreferences = getSharedPreferences("aaaa", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器
         editor.putInt("time", i);
         editor.commit();//提交修改
+'''
 下次进入自动续播
-> private void getTime() {
+'''
+private void getTime() {
         SharedPreferences share=getSharedPreferences("aaaa", Context.MODE_WORLD_READABLE);
         int i=share.getInt("time",0);
         video.setSeekOnStart((long)i);
         //Log.e("222222",i+"");
     }
+'''
