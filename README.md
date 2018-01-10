@@ -24,7 +24,7 @@ private void playVideo() {
 '''
 其中URL来源
 '''
-> url = customInputDialog.getEditMessage().getText().toString();
+url = customInputDialog.getEditMessage().getText().toString();
 '''
 ### 退出播放页面时获取观看进度下次进入自动续播
 获取退出播放页面时播放进度
