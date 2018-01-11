@@ -44,12 +44,15 @@ private void getTime() {
 ```
 ## banner广告图片轮播控件学习使用
 [点击进入banner广告图片轮播控件github地址](https://github.com/youth5201314/banner)
-项目中实现广告图片轮播功能采用banner控件进行实现
+
+此为项目中需要实现广告图片轮播功能采用banner控件进行实现，此处记录使用方法方便自己日后查看
 ### 使用步骤
 以下仅为自己所采用的步骤，其他方法可参照[作者原贴](https://github.com/youth5201314/banner)
 #### 依赖banner
 Gradle
-`compile 'com.youth.banner:banner:1.4.10'  //最新版本`
+```
+compile 'com.youth.banner:banner:1.4.10'  //最新版本
+```
 #### 在AndroidManifest.xml添加权限
 ```
 <!-- if you want to load images from the internet -->
