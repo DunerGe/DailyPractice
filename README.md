@@ -79,6 +79,8 @@ public class GlideImageLoader extends ImageLoader {
           那么这种就使用Object接收和返回，你只需要强转成你传输的类型就行，切记不要胡乱强转！
          */
         eg：
+        //Glide 加载图片简单用法
+        Glide.with(context).load(path).into(imageView);
     }
     
     //提供createImageView 方法，如果不用可以不重写这个方法，主要是方便自定义ImageView的创建
@@ -141,7 +143,7 @@ protected void onCreate(Bundle savedInstanceState) {
     banner.setImages(images).setImageLoader(new GlideImageLoader()).start();
 }
 ```
-#### (以个人可选可不选)增加体验
+#### (依个人可选可不选)增加体验
 ```
 //如果你需要考虑更好的体验，可以这么操作
 @Override
