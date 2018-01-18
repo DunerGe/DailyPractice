@@ -27,4 +27,11 @@ Kotlin有一个非常紧凑的运行时库，可以通过使用ProGuard进一步
 5. 编译
 Kotlin支持高效的增量编译，因此，对于清理构建来说，增加的构建通常与Java一样快或更快。   
 6. 学习
-对于Java开发人员，Kotlin入门很容易。包含在Kotlin插件中的自动化Java到Kotlin转换器有助于实现第一步。   
+对于Java开发人员，Kotlin入门很容易。包含在Kotlin插件中的自动化Java到Kotlin转换器有助于实现第一步。   
+### Kotlin优点
+- Kotlin是一种兼容Java的语言；
+- Kotlin比Java更安全，能够静态检测常见的陷阱。如：引用空指针；
+- Kotlin比Java更简洁，通过支持variable type inference，higher-order functions (closures)，extension functions，mixins and first-class delegation等实现；
+- Kotlin可与Java语言无缝通信。这意味着我们可以在Kotlin代码中使用任何已有的Java库；同样的Kotlin代码还可以为Java代码所用；
+- Kotlin在代码中很少需要在代码中指定类型，因为编译器可以在绝大多数情况下推断出变量或是函数返回值的类型。这样就能获得两个好处：简洁与安全。
+- 编码风格和Java的一样，所以不用出不同的风格进行编码。
