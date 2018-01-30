@@ -3,7 +3,11 @@ This is their own daily practice of small
 # 学习记录
 这是自己在日常Android工作中遇到的一些问题与解决方法
 ## GSYVideoPlayer视频播放开源库使用时遇到的问题
-[点击进入GSYVideoPlayer的github地址](https://github.com/CarGuo/GSYVideoPlayer)
+[点击进入GSYVideoPlayer的github地址](https://github.com/CarGuo/GSYVideoPlayer)    
+### 显示视频标题与返回按钮
+只需要将resolveNormalVideoUI方法中的两个属性由默认的隐藏改为显示
+### 设置视频封面
+只需要将备注掉的setThumbImageView属性备注取消，并将自己的封面图片替换
 ### 跳转URL播放视频
 主要代码
 ```
