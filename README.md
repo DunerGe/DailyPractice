@@ -171,3 +171,8 @@ protected void onStop() {
 大家都知道，如果要让TextView只显示一行，多出部分用省略号代替的话非常容易，只需要为xml文件中的TextView控件添加android:singleLine="true"即可，那么如果我想让它显示多行的时候应该怎么做呢？其实也很简单，只要添加以下两个属性就可以了：    
 android:maxLines="2"    
 android:ellipsize="end"    
+## NavigationView各项Item图标只显示灰色
+解决NavigationView各项Item图标只显示灰色的方法很简单，只需要在java代码中添加
+```
+navView.setItemIconTintList(null);
+```
