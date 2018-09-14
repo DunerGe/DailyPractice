@@ -188,3 +188,14 @@ navView.setItemIconTintList(null);
 - ContentProvider, 常用于跨进程共享数据，比如系统的相册，音乐等   
 
 - 使用Socket传输数据
+## Java与JS通信实现
+### js调用Java的方式基本有三种
+- 通过schema方式，使用shouldOverrideUrlLoading方法对url协议进行解析，js使用iframe来调用native代码
+
+- 在webview页面里直接注入原生js代码方式，使用addJavascriptInterface方法来实现，Demo中有这种实现方式
+
+- 使用prompt,console,log,alert方式，这三个方法对js里是属性原生的，在android webview这一层是可以重写这三个方法的，一般使用pormpt，因为这个再js里使用的不多，用来和native通讯副作用比较少。
+### Java调用JS基本只有一种方式就是loadUrl
+- 4.4之前Native通过loadUrl来调用JS方法,只能让某个JS方法执行,但是无法获取该方法的返回值
+
+- 4.4及之后,通过evaluateJavascript异步调用JS方法,并且能在onReceiveValue中拿到返回值
