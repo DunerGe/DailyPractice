@@ -176,3 +176,15 @@ android:ellipsize="end"
 ```
 navView.setItemIconTintList(null);
 ```
+## Android下的跨进程通信方式
+- 四大组件间可以通过Bundle传递实现   
+
+- 共享文件   
+
+- Messenger, 轻量级的跨进程通信方案，和Handler使用有点类似，底层是通过AIDL实现   
+
+- AIDL，Android接口定义语言，用于定义跨进程通讯的接口   
+
+- ContentProvider, 常用于跨进程共享数据，比如系统的相册，音乐等   
+
+- 使用Socket传输数据
