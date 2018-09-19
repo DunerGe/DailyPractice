@@ -198,4 +198,6 @@ navView.setItemIconTintList(null);
 ### Java调用JS基本只有一种方式就是loadUrl
 - 4.4之前Native通过loadUrl来调用JS方法,只能让某个JS方法执行,但是无法获取该方法的返回值
 
-- 4.4及之后,通过evaluateJavascript异步调用JS方法,并且能在onReceiveValue中拿到返回值
+- 4.4及之后,通过evaluateJavascript异步调用JS方法,并且能在onReceiveValue中拿到返回值   
+## 图片选择框架
+[PictureSelector](https://github.com/LuckSiege/PictureSelector)
