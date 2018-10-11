@@ -201,3 +201,9 @@ navView.setItemIconTintList(null);
 - 4.4及之后,通过evaluateJavascript异步调用JS方法,并且能在onReceiveValue中拿到返回值   
 ## 图片选择框架
 [PictureSelector](https://github.com/LuckSiege/PictureSelector)
+## 自定义三角角标
+首先是自定义标签的流程    
+[自定义view详解](https://www.jianshu.com/p/d8dcfaa0f652)    
+首先通过这篇文章了解自定义的详细步骤和过程，接下来是自定义三角角标    
+[自定义三角角标](https://www.jianshu.com/p/d5027463208e)
+需要定义旋转角度、长度、背景颜色、字体大小与颜色等问题
