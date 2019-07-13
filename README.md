@@ -207,4 +207,7 @@ navView.setItemIconTintList(null);
 首先通过这篇文章了解自定义的详细步骤和过程，接下来是自定义三角角标    
 [自定义三角角标](https://www.jianshu.com/p/d5027463208e)
 需要定义旋转角度、长度、背景颜色、字体大小与颜色等问题
-## 低功耗蓝牙BLE开发学习
+## android shape/layer-list实现渐变阴影效果
+[](https://www.jianshu.com/p/d2aa65a91a42)
+## github中文乱码解决方法
+[](https://www.cnblogs.com/yanzige/p/9810333.html)
