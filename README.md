@@ -211,3 +211,46 @@ navView.setItemIconTintList(null);
 [](https://www.jianshu.com/p/d2aa65a91a42)
 ## github中文乱码解决方法
 [](https://www.cnblogs.com/yanzige/p/9810333.html)
+## 判断APP是否在后台运行
+```
+public static boolean isBackground(Context context) {
+        ActivityManager activityManager = (ActivityManager) context
+                .getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> appProcesses = activityManager
+                .getRunningAppProcesses();
+        for (ActivityManager.RunningAppProcessInfo appProcess : appProcesses) {
+            if (appProcess.processName.equals(context.getPackageName())) {
+                /*
+                BACKGROUND=400 EMPTY=500 FOREGROUND=100
+                GONE=1000 PERCEPTIBLE=130 SERVICE=300 ISIBLE=200
+                 */
+                Log.i(context.getPackageName(), "此appimportace ="
+                        + appProcess.importance
+                        + ",context.getClass().getName()="
+                        + context.getClass().getName());
+                if (appProcess.importance != ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
+                    Log.i(context.getPackageName(), "处于后台"
+                            + appProcess.processName);
+                    return true;
+                } else {
+                    Log.i(context.getPackageName(), "处于前台"
+                            + appProcess.processName);
+                    return false;
+                }
+            }
+        }
+        return false;
+    }
+```
+## 判断当前activity是否在运行
+```
+private boolean isTopActivity() {
+        boolean isTop = false;
+        ActivityManager am = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+        ComponentName cn = am.getRunningTasks(1).get(0).topActivity;
+        if (cn.getClassName().contains(TAG)) {
+            isTop = true;
+        }
+        return isTop;
+    }
+```
