@@ -410,4 +410,7 @@ ScrollTextView marqueeText = headView.findViewById(R.id.xxxx);
         marqueeText.startScroll();
 ```
 
-
+### textview输入数字
+```
+android:inputType="number|numberDecimal"
+```
