@@ -414,3 +414,22 @@ ScrollTextView marqueeText = headView.findViewById(R.id.xxxx);
 ```
 android:inputType="number|numberDecimal"
 ```
+### EditView输入监听，关闭软键盘
+ ```
+ TextWatcher textWatcher = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int       start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
+            }
+        };
+        dsName.addTextChangedListener(textWatcher);
+ ```
