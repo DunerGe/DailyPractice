@@ -433,3 +433,32 @@ android:inputType="number|numberDecimal"
         };
         dsName.addTextChangedListener(textWatcher);
  ```
+### 密码输入切换显示与隐藏
+```
+   //密碼是否可見
+    private boolean isPwdVisible = false;
+    /**
+     * 设置密码是否可见
+     */
+    private void setPasswordVisible() {
+        //ImageView点击事件
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //修改密码是否可见的状态
+                isPwdVisible = !isPwdVisible;
+                //設置密碼是否可見
+                if (isPwdVisible) {
+                    //设置密码为明文，并更改眼睛图标
+                    editText1.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    imageView.setImageResource(R.mipmap.show_pwd_image);
+                } else {
+                    //设置密码为暗文，并更改眼睛图标
+                    editText1.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    imageView.setImageResource(R.mipmap.hide_pwd_image);
+                }
+                //设置光标位置的代码需放在设置明暗文的代码后面
+                editText1.setSelection(editText1.getText().toString().length());
+            }
+        });
+```
